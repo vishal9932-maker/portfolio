@@ -8,7 +8,7 @@ const certificates = [
         issuer: 'HCL / GUVI Certification',
         date: 'March 7, 2026',
         type: 'image',
-        src: '/certificate/guvi_web_dev.png',
+        src: 'certificate/guvi_web_dev.png',
         color: '#E34F26',
         badge: 'Frontend Development',
         credentialId: '127892d7BYf108V1sw',
@@ -20,7 +20,7 @@ const certificates = [
         issuer: 'HCL / GUVI Certification',
         date: 'March 22, 2026',
         type: 'image',
-        src: '/certificate/guvi_full_stack.png',
+        src: 'certificate/guvi_full_stack.png',
         color: '#00d2ff',
         badge: 'Full Stack Engineering',
         credentialId: '71etRDc19L141772uX',
@@ -32,7 +32,7 @@ const certificates = [
         issuer: 'HCL / GUVI Certification',
         date: 'February 21, 2026',
         type: 'image',
-        src: '/certificate/guvi_programming.png',
+        src: 'certificate/guvi_programming.png',
         color: '#FFE052',
         badge: 'Core Programming',
         credentialId: '715UmN91g',
@@ -44,7 +44,7 @@ const certificates = [
         issuer: 'HP LIFE Foundation',
         date: 'January 28, 2026',
         type: 'image',
-        src: '/certificate/hp_critical_thinking.png',
+        src: 'certificate/hp_critical_thinking.png',
         color: '#0096D6',
         badge: 'AI & Critical Thinking',
         credentialId: '386501f5-5e19-435c-930b',
@@ -56,7 +56,7 @@ const certificates = [
         issuer: 'IBM Cognitive Class',
         date: 'February 22, 2026',
         type: 'image',
-        src: '/certificate/ibm_mysql.png',
+        src: 'certificate/ibm_mysql.png',
         color: '#0052FF',
         badge: 'Databases',
         credentialId: 'IBM-GPXX01RYEN',
@@ -68,7 +68,7 @@ const certificates = [
         issuer: 'HP LIFE Foundation',
         date: 'July 25, 2025',
         type: 'image',
-        src: '/certificate/hp_ai_beginners.png',
+        src: 'certificate/hp_ai_beginners.png',
         color: '#00BFFF',
         badge: 'Artificial Intelligence',
         credentialId: '8520bec9-2a2d-44ff-8c56',
@@ -80,7 +80,7 @@ const certificates = [
         issuer: 'MongoDB, Inc.',
         date: 'July 17, 2025',
         type: 'image',
-        src: '/certificate/mongo_db_certificate.png',
+        src: 'certificate/mongo_db_certificate.png',
         color: '#00ED64',
         badge: 'Database',
         credentialId: 'MDBwgxmvzs6zc',
@@ -92,13 +92,14 @@ const certificates = [
         issuer: 'Certification Authority',
         date: '2026',
         type: 'image',
-        src: '/certificate/react_js_certificate.jpeg',
+        src: 'certificate/react_js_certificate.jpeg',
         color: '#61DAFB',
         badge: 'Frontend Framework',
         credentialId: 'REACT-JS-2026',
         desc: 'Certified in React.js covering component architecture, hooks, state management, routing, and building scalable modern web applications.'
     }
 ];
+
 
 export default function Certificates() {
     const [lightbox, setLightbox] = useState(null);

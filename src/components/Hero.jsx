@@ -98,7 +98,7 @@ export default function Hero() {
                             </button>
 
                             <a
-                                href="/Vishal_Resume.pdf"
+                                href="Vishal_Resume.pdf"
                                 download="Vishal_Resume.pdf"
                                 className="btn btn-secondary"
                                 onClick={(e) => {
@@ -167,7 +167,7 @@ export default function Hero() {
                             <div className="avatar-container" style={{ position: 'relative', overflow: 'hidden' }}>
                                 {/* Profile image */}
                                 <img
-                                    src="/profile.jpeg"
+                                    src="profile.jpeg"
                                     alt="Vishal"
                                     className="hero-avatar-image"
                                     style={{
