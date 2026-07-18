@@ -1,0 +1,186 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    /* Colors */
+    --bg-color: #0B0B0F;
+    --secondary-bg: #111827;
+    --primary: #7C3AED;
+    --accent: #3B82F6;
+    --text-primary: #FFFFFF;
+    --text-secondary: #9CA3AF;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, #7C3AED 0%, #3B82F6 100%);
+    --gradient-glow: linear-gradient(90deg, #7C3AED, #3B82F6);
+    --gradient-dark: linear-gradient(180deg, #0B0B0F 0%, #111827 100%);
+
+    /* Glassmorphism */
+    --glass-bg: rgba(17, 24, 39, 0.45);
+    --glass-border: rgba(255, 255, 255, 0.06);
+    --glass-highlight: rgba(124, 58, 237, 0.15);
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+
+    /* Fonts */
+    --font-heading: 'Poppins', 'Inter', sans-serif;
+    --font-body: 'Inter', 'Poppins', sans-serif;
+
+    /* Transitions */
+    --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-normal: 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+    --transition-slow: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* Global Reset & Base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary) var(--bg-color);
+    font-size: 16px;
+    background-color: var(--bg-color);
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-primary);
+    background-color: var(--bg-color);
+    overflow-x: hidden;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+input,
+textarea,
+button {
+    font-family: var(--font-body);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--primary) 0%, var(--accent) 100%);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+}
+
+/* Custom Interactive Cursor */
+.custom-cursor-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #3B82F6;
+    border-radius: 50%;
+    position: fixed;
+    top: -4px;
+    left: -4px;
+    z-index: 10000;
+    pointer-events: none;
+    transition: transform 0.08s ease-out, background-color var(--transition-fast);
+    box-shadow: 0 0 10px #3B82F6;
+}
+
+.custom-cursor-ring {
+    width: 32px;
+    height: 32px;
+    border: 1px solid rgba(124, 58, 237, 0.6);
+    border-radius: 50%;
+    position: fixed;
+    top: -16px;
+    left: -16px;
+    z-index: 9999;
+    pointer-events: none;
+    transition: transform 0.15s ease-out, width 0.3s, height 0.3s, border-color 0.3s, background-color 0.3s;
+}
+
+/* Cursor States */
+.custom-cursor-dot.hovered {
+    transform: scale(0.5);
+    background-color: #7C3AED;
+    box-shadow: 0 0 10px #7C3AED;
+}
+
+.custom-cursor-ring.hovered {
+    width: 50px;
+    height: 50px;
+    top: -25px;
+    left: -25px;
+    background-color: rgba(124, 58, 237, 0.08);
+    border-color: #3B82F6;
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
+}
+
+.custom-cursor-dot.clicking {
+    transform: scale(1.5);
+}
+
+.custom-cursor-ring.clicking {
+    transform: scale(0.8);
+    border-color: #FFFFFF;
+}
+
+/* Global Grid Container */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Glass Panel Utility */
+.glass-panel {
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    border-radius: 16px;
+    transition: border-color var(--transition-normal), box-shadow var(--transition-normal), transform var(--transition-normal);
+}
+
+.glass-panel:hover {
+    border-color: rgba(124, 58, 237, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(124, 58, 237, 0.15);
+}
+
+/* Reveal Animation States */
+.reveal-wrapper {
+    opacity: 0;
+    transition-property: opacity, transform;
+    will-change: opacity, transform;
+}
+
+.reveal-wrapper.fade-up {
+    transform: translateY(40px);
+}
+
+.reveal-wrapper.slide-left {
+    transform: translateX(-40px);
+}
+
+.reveal-wrapper.slide-right {
+    transform: translateX(40px);
+}
+
+.reveal-wrapper.zoom {
+    transform: scale(0.9);
+}
+
+.reveal-wrapper.revealed {
+    opacity: 1;
+    transform: translate(0) scale(1);
+}
