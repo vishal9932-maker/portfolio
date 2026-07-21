@@ -616,6 +616,11 @@ section {
     border-color: rgba(59, 130, 246, 0.3);
 }
 
+.project-card.glow-orange:hover {
+    box-shadow: 0 15px 35px -10px rgba(249, 115, 22, 0.25);
+    border-color: rgba(249, 115, 22, 0.3);
+}
+
 .project-img-container {
     width: 100%;
     height: 200px;
